@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "555150523706",
+    "project_id": "kaminesubs-ace29",
+    "storage_bucket": "kaminesubs-ace29.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:555150523706:android:c775e33868f59cee442403",
+        "android_client_info": {
+          "package_name": "com.example.streamingapp1"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "555150523706-vkff1rsmi3q9stqolt7lj932tl3p50mn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC9IUJEx_eyFOZGynQdUxz5j_pwb3zGYD4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "555150523706-vkff1rsmi3q9stqolt7lj932tl3p50mn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

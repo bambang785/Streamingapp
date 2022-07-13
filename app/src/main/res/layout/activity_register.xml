@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".Register"
+    android:orientation="vertical"
+    android:background="@drawable/ic_sign_up">
+
+
+    <ImageView
+        android:layout_width="160dp"
+        android:layout_height="170dp"
+        android:layout_marginStart="55dp"
+        android:layout_marginTop="-45dp"
+        app:srcCompat="@drawable/logo1" />
+
+    <ImageButton
+        android:id="@+id/backbutton1"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/ic_baseline_arrow_back_24" />
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="300dp"
+        android:layout_marginTop="670dp"
+        app:srcCompat="@drawable/logo2" />
+
+
+    <EditText
+        android:id="@+id/txusernameRegist"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="10dp"
+        android:autofillHints="Username"
+        android:background="@drawable/box"
+        android:drawablePadding="12dp"
+        android:ems="10"
+        android:hint="@string/login"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:textColor="#404040"
+        android:textColorHint="#404040"
+        android:textSize="14sp"
+        android:translationY="200sp" />
+
+    <EditText
+        android:id="@+id/txpasswordRegist"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="10dp"
+        android:autofillHints="Username"
+        android:background="@drawable/box"
+        android:drawablePadding="12dp"
+        android:ems="10"
+        android:hint="@string/password"
+        android:inputType="textPassword"
+        android:minHeight="48dp"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:textColor="#404040"
+        android:textColorHint="#404040"
+        android:textSize="14sp"
+        android:translationY="280sp" />
+
+
+    <EditText
+        android:id="@+id/txpasswordconfRegist"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="10dp"
+        android:autofillHints="Username"
+        android:background="@drawable/box"
+        android:drawablePadding="12dp"
+        android:ems="10"
+        android:hint="@string/passwordconf"
+        android:inputType="textPassword"
+        android:minHeight="48dp"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:textColor="#404040"
+        android:textColorHint="#404040"
+        android:textSize="14sp"
+        android:translationY="360sp" />
+
+    <ImageView
+        android:id="@+id/IvShowHidePass1"
+        android:layout_width="30dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="290dp"
+        android:layout_marginTop="380dp"
+        android:src="@drawable/ic_show_password_24" />
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/buttonsignin2"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="34dp"
+        android:layout_marginTop="450dp"
+        android:background="@drawable/buttonsignup"
+        android:text="@string/signup"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:translationY="550dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="Already Have an Account ?"
+        android:textColor="#C6BCBC"
+        android:textColorHint="#EBEDF2"
+        android:textSize="18sp" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/signupbutton1"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@android:color/transparent"
+        android:gravity="center"
+        android:scaleX="1"
+        android:text="@string/signin"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:translationY="570dp" />
+
+</RelativeLayout>

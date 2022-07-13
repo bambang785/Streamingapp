@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Kaminesubs</string>
+    <string name="kamine">kamine</string>
+    <string name="signin">SIGN IN</string>
+    <string name="signup">SIGN UP</string>
+    <string name="login">Email</string>
+    <string name="password">Password</string>
+    <string name="passwordconf">Password Confirmation</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
