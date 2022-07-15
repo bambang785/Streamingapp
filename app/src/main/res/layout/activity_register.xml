@@ -106,7 +106,7 @@
 
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/buttonsignin2"
+        android:id="@+id/buttonsigninregist"
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:layout_centerHorizontal="true"
@@ -131,7 +131,7 @@
         android:textSize="18sp" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/signupbutton1"
+        android:id="@+id/signupbuttonregist"
         android:layout_width="match_parent"
         android:layout_height="48dp"
         android:background="@android:color/transparent"

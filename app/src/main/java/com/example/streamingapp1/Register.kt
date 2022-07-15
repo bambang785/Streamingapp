@@ -13,12 +13,13 @@ import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_register.*
 
 class Register : AppCompatActivity() {
-    private lateinit var auth: FirebaseAuth
+    private lateinit var auth: FirebaseAuth;
     private lateinit var binding: ActivityRegisterBinding;
     private var mIsShowPass = false
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
+        auth = FirebaseAuth.getInstance()
         binding = ActivityRegisterBinding.inflate(layoutInflater)
         val view = binding.root
         setContentView(view)
@@ -37,10 +38,10 @@ class Register : AppCompatActivity() {
     }
 
     private fun clickListener(){
-        binding.buttonsignin2.setOnClickListener {
+        binding.buttonsigninregist.setOnClickListener {
             createUser()
         }
-        binding.signupbutton1.setOnClickListener {
+        binding.signupbuttonregist.setOnClickListener {
             startActivity(Intent(this,Login::class.java))
             finish()
         }
@@ -50,7 +51,7 @@ class Register : AppCompatActivity() {
         var password = binding.txpasswordRegist.text.toString()
         var cpassword = binding.txpasswordconfRegist.text.toString()
 
-        if (email.isNotEmpty() && password.isNotEmpty() && password.length<6 && cpassword.isNotEmpty()) {
+        if (email.isNotEmpty() && password.isNotEmpty() && cpassword.isNotEmpty()) {
             if (password == cpassword) {
                 saveUser(email, password)
             }

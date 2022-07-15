@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ic_main_menu"
+    tools:context=".profile">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/logo2"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="25dp"
+        />
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="160dp"
+        android:layout_height="170dp"
+        android:layout_marginLeft="55dp"
+        android:layout_marginTop="-35dp"
+        android:src="@drawable/logo1"
+        />
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="100dp"
+        android:fillViewport="true"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" />
+
+    <FrameLayout
+        android:id="@+id/listFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            style="@style/TextAppearance.MaterialComponents.Caption"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="You're LoggedIn as"
+            android:layout_gravity="center"
+            android:translationY="-20dp"
+            />
+        <TextView
+            android android:id="@+id/emailTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Email"
+            android:layout_gravity="center"
+            style="@style/TextAppearance.MaterialComponents.Body1"
+            android:translationY="10dp"
+            />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/logoutbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Logout"
+            android:background="@drawable/buttonsignup"
+            android:layout_gravity="center"
+            android:layout_marginTop="60dp" />
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/viewPager"
+            android:layout_width="400dp"
+            android:layout_height="430dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="90dp"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+    </FrameLayout>
+</RelativeLayout>
