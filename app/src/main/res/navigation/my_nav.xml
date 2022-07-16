@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_nav"
+    app:startDestination="@id/homeFragment">
+
+    <activity
+        android:id="@+id/menu"
+        android:name="com.example.streamingapp1.Dashboard1"
+        android:label="activity_menu"
+        tools:layout="@layout/activity_dashboard1" />
+
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.streamingapp1.Profile"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.streamingapp1.Home"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+    </fragment>
+</navigation>

@@ -1,54 +1,47 @@
 package com.example.streamingapp1
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
+import android.widget.ImageView
+import android.widget.PopupMenu
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.example.streamingapp1.databinding.ActivityDashboard1Binding
+import com.example.streamingapp1.databinding.FragmentProfileBinding
 import com.google.android.material.bottomnavigation.BottomNavigationView
-import com.google.firebase.auth.FirebaseAuth
+import java.lang.Exception
 
 class Dashboard1 : AppCompatActivity() {
-    private lateinit var auth: FirebaseAuth
     private lateinit var binding: ActivityDashboard1Binding
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityDashboard1Binding.inflate(layoutInflater)
-        val view = binding.root
-        setContentView(view)
+        setContentView(binding.root)
+        loadFragment(Home())
 
+        binding.bottomNavigationView.setOnItemSelectedListener {
 
-        val homefragment = Home()
-
-        makeCurrentFragment (homefragment)
-
-        val bottom_navigation = findViewById<BottomNavigationView>(R.id.bottom_navigation)
-
-        bottom_navigation.setOnNavigationItemReselectedListener {
             when(it.itemId){
-                R.id.navigation_home -> makeCurrentFragment(homefragment)
+
+                R.id.navigation_home -> loadFragment(Home())
+                R.id.navigation_profile -> loadFragment(Profile())
+
+                else ->{
+
+                }
             }
             true
         }
-        auth = FirebaseAuth.getInstance()
-        checkUser()
+    }
+    private fun loadFragment(fragment: Fragment){
+
+        val fragmentManager = supportFragmentManager
+        val fragmentTransaction = fragmentManager.beginTransaction()
+        fragmentTransaction.replace(R.id.frame_layout,fragment)
+        fragmentTransaction.commit()
     }
 
-    private fun checkUser() {
-        val firebaseUser = auth.currentUser
-        if (firebaseUser == null){
-            startActivity(Intent(this, Welcome::class.java))
-            finish()
-        }
-    }
-
-    private fun makeCurrentFragment(fragment: Fragment) {
-        supportFragmentManager.beginTransaction().apply {
-            replace(R.id.container_fragment, fragment)
-            commit()
-        }
-
-    }
 }

@@ -6,7 +6,6 @@
         android:icon="@drawable/home"
         android:title="Home" />
 
-
     <item
         android:id="@+id/navigation_explore"
         android:icon="@drawable/rocket"
@@ -17,7 +16,6 @@
         android:id="@+id/navigation_download"
         android:icon="@drawable/download"
         android:title="Download" />
-
 
     <item
         android:id="@+id/navigation_profile"
